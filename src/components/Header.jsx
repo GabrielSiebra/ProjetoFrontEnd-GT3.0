@@ -1,5 +1,6 @@
 import logoImg from '../assets/logo-header.svg'
-import 'primeicons/primeicons.css';
+import 'primeicons/primeicons.css'
+import './Header.css'
 
 const Header = () => {
     return (
