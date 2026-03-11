@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom';
 import logoImg from '../assets/logo-header.svg'
 import 'primeicons/primeicons.css'
 import './Header.css'
@@ -8,7 +9,9 @@ const Header = () => {
         <header className="header-container">
             <div className='header-top'>
                 <div className="logo">
-                    <img src={logoImg}/>
+                    <Link to="/">
+                        <img src={logoImg} alt="Logo Digital Store" />
+                    </Link>
             </div>
             <div className="searchBox">
                 <input type="text" placeholder="Pesquisar produtos..."/>
@@ -26,12 +29,28 @@ const Header = () => {
             </div>
 
             <nav className="header-nav">
-                    <ul>
-                        <li><a href="/" className="active">Home</a></li>
-                        <li><a href="/produtos">Produtos</a></li>
-                        <li><a href="/categorias">Categorias</a></li>
-                        <li><a href="/pedidos">Meus Pedidos</a></li>
-                    </ul>
+                <ul>
+                    <li>
+                        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/produtos" className={({ isActive }) => isActive ? "active" : ""}>
+                            Produtos
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/categorias" className={({ isActive }) => isActive ? "active" : ""}>
+                            Categorias
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/pedidos" className={({ isActive }) => isActive ? "active" : ""}>
+                            Meus Pedidos
+                        </NavLink>
+                    </li>
+                </ul>
             </nav>
         </header>
         </>

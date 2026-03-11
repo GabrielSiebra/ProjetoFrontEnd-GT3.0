@@ -89,3 +89,12 @@
     border-bottom: 2px solid #c92071;
     padding-bottom: 5px;
 }
+.header-nav ul li a {
+    color: #474747;
+    text-decoration: none;
+    font-weight: normal;
+}
+.header-nav ul li a.active {
+    color: #C92071;
+    font-weight: bold;
+}
