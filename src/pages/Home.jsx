@@ -2,6 +2,8 @@ import ProductCard from '../components/ProductCard'
 import sneakerImg from '../assets/sneaker-1.svg'
 import Hero from '../components/Hero'
 import FeaturedCollections from '../components/FeaturedCollections';
+import CategoryIcons from '../components/CategoryIcons';
+import SpecialOffer from '../components/SpecialOffer'
 
 const Home = () => {
     const trendingProducts = [
@@ -23,6 +25,8 @@ const Home = () => {
 
             <FeaturedCollections/>
 
+            <CategoryIcons/>
+
             <section className="trending-products">
                 <h2>Produtos em alta</h2>               
                 <div className="product-grid">
@@ -38,6 +42,7 @@ const Home = () => {
                 ))}
                 </div>
             </section>
+            <SpecialOffer/>
         </div>
         </>
     );
