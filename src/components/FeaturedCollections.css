@@ -1,0 +1,79 @@
+.featured-collections {
+  padding: 40px 10%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.featured-collections h2 {
+  font-size: 24px;
+  color: #474747;
+  margin-bottom: 20px;
+}
+.collections-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.collection-card {
+  background-color: #D8E3F2; /* Fundo do card */
+  border-radius: 8px;
+  /* Reduzimos um pouco o padding para dar mais espaço interno */
+  padding: 30px 20px 30px 30px; 
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  /* overflow: hidden; <-- Remova ou comente essa linha se a imagem do tênis/fone estiver sendo cortada nas bordas */
+  min-height: 260px; /* Aumentamos um pouco a altura mínima */
+}
+
+.collection-content {
+  position: relative;
+  z-index: 2;
+  /* Aumentamos a largura permitida para o texto não quebrar tanto */
+  max-width: 65%; 
+}
+.collection-discount {
+  background-color: #E7FF86; /* Cor da tag de desconto */
+  color: #474747;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.collection-title {
+  font-size: 24px; 
+  color: #1F1F1F;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.btn-buy {
+  background-color: #F5F5F5;
+  color: #C92071;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.collection-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 55%; 
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.collection-image img {
+  width: 100%;
+  max-height: 110%;
+  object-fit: contain;
+  object-position: bottom right;
+}
