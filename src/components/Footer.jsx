@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 import './Footer.css';
 
@@ -22,22 +23,22 @@ const Footer = () => {
                 <div className="column-links">
                     <h3>Informação</h3>
                     <ul>
-                        <li><a href="#">Sobre Drip Store</a></li>
-                        <li><a href="#">Segurança</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Trabalhe conosco</a></li>
-                        <li><a href="#">Meus Pedidos</a></li>
+                        <li><Link to="/sobre">Sobre Drip Store</Link></li>
+                        <li><Link to="/seguranca">Segurança</Link></li>
+                        <li><Link to="/wishlist">Wishlist</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/trabalhe-conosco">Trabalhe conosco</Link></li>
+                        <li><Link to="/pedidos">Meus Pedidos</Link></li>
                     </ul>
                 </div>
                 <div className="column-links">
                     <h3>Categorias</h3>
                     <ul>
-                        <li><a href="#">Camisetas</a></li>
-                        <li><a href="#">Calças</a></li>
-                        <li><a href="#">Bonés</a></li>
-                        <li><a href="#">Headphones</a></li>
-                        <li><a href="#">Tênis</a></li>
+                        <li><Link to="/produtos">Camisetas</Link></li>
+                        <li><Link to="/produtos">Calças</Link></li>
+                        <li><Link to="/produtos">Bonés</Link></li>
+                        <li><Link to="/produtos">Headphones</Link></li>
+                        <li><Link to="/produtos">Tênis</Link></li>
                     </ul>
                 </div>
                 <div className="column-contact">

@@ -1,10 +1,11 @@
-.hero-banner {
+.hero-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #F5F5F5;
   padding: 80px 10%;
   min-height: 400px;
+  position: relative;
 }
 .hero-content {
   max-width: 500px;
@@ -42,8 +43,30 @@
 .btn-primary:hover {
   background-color: #991956;
 }
-.hero-image-container img {
+.hero-image img {
   max-width: 100%;
   width: 500px;
   object-fit: contain;
+}
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dot.active {
+  background-color: #C92071;
+}
+.dot:hover {
+  background-color: #991956;
 }

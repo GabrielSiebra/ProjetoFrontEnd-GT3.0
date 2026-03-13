@@ -20,10 +20,29 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.trending-products .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 .trending-products h2 {
   font-size: 24px;
   color: #474747;
-  margin-bottom: 20px;
+}
+.see-more-link {
+  color: #C92071;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+.see-more-link:hover {
+  color: #991956;
+  text-decoration: underline;
 }
 .product-grid {
   display: grid;
