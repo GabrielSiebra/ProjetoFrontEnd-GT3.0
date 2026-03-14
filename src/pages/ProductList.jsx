@@ -1,9 +1,13 @@
-import ProductCard from '../components/ProductCard';
-import './ProductList.css';
+import { useState } from 'react'
+import ProductCard from '../components/ProductCard'
+import './ProductList.css'
+import 'primeicons/primeicons.css';
 
-import sneakersImg from '../assets/sneaker-1.svg'; 
+import sneakersImg from '../assets/sneaker-1.svg';
 
 const ProductList = () => {
+
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const products = [
     { id: 1, name: "Tênis Nike Revolution 6 Next Nature Masculino", category: "Tênis", price: "200,00", discountPrice: "100,00", image: sneakersImg },
@@ -17,25 +21,38 @@ const ProductList = () => {
   return (
     <div className="product-list-page">
       
+      <div 
+        className={`mobile-filter-overlay ${isFilterOpen ? 'open' : ''}`} 
+        onClick={() => setIsFilterOpen(false)}
+      ></div>
+
       <div className="search-results-header">
         <span className="results-text">
           Resultados para "Tênis" - <strong>389 produtos</strong>
         </span>
         
-        <div className="sort-by">
-          <label htmlFor="sort">Ordenar por:</label>
-          <select id="sort" className="sort-select">
-            <option value="relevance">Mais relevantes</option>
-            <option value="lowest-price">Menor preço</option>
-            <option value="highest-price">Maior preço</option>
-          </select>
+        <div className="header-actions">
+          <div className="sort-by">
+            <label htmlFor="sort">Ordenar por:</label>
+            <select id="sort" className="sort-select">
+              <option value="relevance">mais relevantes</option>
+              <option value="lowest-price">menor preço</option>
+              <option value="highest-price">maior preço</option>
+            </select>
+          </div>
+          <button className="filter-btn-mobile" onClick={() => setIsFilterOpen(true)}>
+            <i className="pi pi-filter"></i>
+          </button>
         </div>
       </div>
 
       <div className="product-list-container">
-        
-        <aside className="filter-sidebar">
-          <h3 className="filter-title">Filtrar por</h3>
+        <aside className={`filter-sidebar ${isFilterOpen ? 'open' : ''}`}>
+          
+          <div className="filter-header">
+            <h3 className="filter-title">Filtrar por</h3>
+            <i className="pi pi-times close-filter-icon" onClick={() => setIsFilterOpen(false)}></i>
+          </div>
           <hr className="filter-divider" />
 
           <div className="filter-group">
@@ -69,7 +86,6 @@ const ProductList = () => {
           </div>
         </aside>
 
-        
         <main className="product-listing">
           <div className="product-grid">
             {products.map((product) => (

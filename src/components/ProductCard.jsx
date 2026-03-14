@@ -1,7 +1,12 @@
-const ProductCard = ({ image, category, name, price, discountPrice }) => {
+import { Link } from 'react-router-dom';
+
+const ProductCard = ({ id, image, category, name, price, discountPrice }) => {
     return (
-        <>
-        <div className="product-card">
+        <Link 
+            to={`/produto/${id}`} 
+            className="product-card" 
+            style={{ textDecoration: 'none', color: 'inherit' }}
+        >
             <div className="product-image">
                 <img src={image} alt={name} />
             </div>
@@ -11,12 +16,11 @@ const ProductCard = ({ image, category, name, price, discountPrice }) => {
                 <h3 className="product-name">{name}</h3>
                 
                 <div className="product-prices">
-                <span className="price-old">R$ {price}</span>
-                <span className="price-new">R$ {discountPrice}</span>
+                    <span className="price-old">R$ {price}</span>
+                    <span className="price-new">R$ {discountPrice}</span>
                 </div>
             </div>
-        </div>
-        </>
+        </Link>
     );
 };
 

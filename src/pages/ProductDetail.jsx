@@ -170,10 +170,12 @@ const ProductDetail = () => {
             </Link>
         </div>
         
+        
         <div className="product-grid">
           {relatedProducts.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               image={product.image}
               category={product.category}
               name={product.name}

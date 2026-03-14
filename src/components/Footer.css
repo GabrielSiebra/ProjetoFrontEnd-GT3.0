@@ -98,11 +98,27 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media (max-width: 576px) {
   .grid-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px 15px;
   }
+
+  .column-brand {
+    grid-column: span 2;
+  }
+  .column-contact {
+    grid-column: span 2;
+  }
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  .logo-icon {
+    font-size: 1rem;
+  }
+
   .footer-container {
     padding: 40px 0 20px 0;
   }

@@ -1,11 +1,17 @@
 .hero-section {
+  background-color: #F5F5F5;
+  padding: 40px 20px;
+  width: 100%;
+}
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5F5F5;
-  padding: 80px 10%;
   min-height: 400px;
   position: relative;
+  padding: 0 5%;
 }
 .hero-content {
   max-width: 500px;
@@ -50,7 +56,7 @@
 }
 .hero-dots {
   position: absolute;
-  bottom: 30px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -67,6 +73,14 @@
 .dot.active {
   background-color: #C92071;
 }
-.dot:hover {
-  background-color: #991956;
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
 }

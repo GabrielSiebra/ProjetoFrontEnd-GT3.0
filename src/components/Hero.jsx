@@ -28,35 +28,37 @@ const Hero = () => {
       image: heroImg
     }
   ];
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide === 2 ? 0 : prevSlide + 1));
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
 
   return (
     <section className="hero-section">
-      <div className="hero-content">
-        <span className="hero-subtitle">{slides[currentSlide].subtitle}</span>
-        <h1 className="hero-title">{slides[currentSlide].title}</h1>
-        <p className="hero-description">{slides[currentSlide].description}</p>
-        <button className="btn-primary">Ver Ofertas</button>
-      </div>
+      <div className="hero-container">
+        <div className="hero-content">
+          <span className="hero-subtitle">{slides[currentSlide].subtitle}</span>
+          <h1 className="hero-title">{slides[currentSlide].title}</h1>
+          <p className="hero-description">{slides[currentSlide].description}</p>
+          <button className="btn-primary">Ver Ofertas</button>
+        </div>
 
-      <div className="hero-image">
-        <img src={slides[currentSlide].image} alt="Tênis em destaque" />
-      </div>
+        <div className="hero-image">
+          <img src={slides[currentSlide].image} alt="Tênis em destaque" />
+        </div>
 
-      <div className="hero-dots">
-        {slides.map((slide, index) => (
-          <div 
-            key={slide.id}
-            className={`dot ${currentSlide === index ? 'active' : ''}`}
-            onClick={() => setCurrentSlide(index)}
-          ></div>
-        ))}
+        <div className="hero-dots">
+          {slides.map((slide, index) => (
+            <div 
+              key={slide.id}
+              className={`dot ${currentSlide === index ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+            ></div>
+          ))}
+        </div>
       </div>
     </section>
   );

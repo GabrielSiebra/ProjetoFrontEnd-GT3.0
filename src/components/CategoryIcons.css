@@ -1,5 +1,5 @@
 .category-icons-section {
-  text-align: center;
+  text-align: left;
   padding: 40px 10%;
   max-width: 1440px;
   margin: 0 auto;
@@ -40,4 +40,23 @@
   font-size: 14px;
   color: #474747;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .category-icons-section {
+    padding: 40px 5%;
+  }
+
+  .category-grid {
+    gap: 20px; 
+  }
+
+  .icon-container {
+    width: 72px;
+    height: 72px;
+  }
+  
+  .category-label {
+    font-size: 12px;
+  }
 }

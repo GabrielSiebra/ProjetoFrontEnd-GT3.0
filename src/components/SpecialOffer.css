@@ -69,3 +69,28 @@
 .offer-content .btn-primary:hover {
   background-color: #991956;
 }
+@media (max-width: 768px) {
+  .special-offer {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 40px 5%;
+  }
+
+  .offer-title {
+    font-size: 32px;
+  }
+  .offer-image-container::before {
+    width: 250px;
+    height: 250px;
+  }
+  .offer-image-container img {
+    width: 100%;
+    max-width: 300px; 
+  }
+  .offer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+}
